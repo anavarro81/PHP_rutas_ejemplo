@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Cars {% endblock %}
+
+{% block body %}
+
+    Estoy en cars
+
+    {% if coches is defined %}
+            {% for coche in coches %}
+                <h4>{{coche.marca}}</h4>
+                <p>{{coche.modelo}}</p>
+                <p>{{coche.foto}}</p>
+            {% endfor %}
+    {% endif %}
+
+{% endblock %}

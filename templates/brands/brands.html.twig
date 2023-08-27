@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Marcas {% endblock %}
+
+{% block body %}
+
+    Estoy en Marcas
+
+    {% if marcas is defined %}
+            {% for marca in marcas %}
+                <h4>{{marca.nombre}}</h4>                
+                <p>{{marca.logo}}</p>
+            {% endfor %}
+    {% endif %}
+
+{% endblock %}

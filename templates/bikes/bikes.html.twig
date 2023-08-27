@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Motos {% endblock %}
+
+{% block body %}
+
+    Estoy en Motos
+
+    {% if motos is defined %}
+            {% for moto in motos %}
+                <h4>{{moto.nombre}}</h4>                
+                <p>{{moto.modelo}}</p>
+                <p>{{moto.foto}}</p>
+            {% endfor %}
+    {% endif %}
+
+{% endblock %}
